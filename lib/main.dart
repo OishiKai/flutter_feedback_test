@@ -65,10 +65,11 @@ class _MyHomePageState extends State<MyHomePage> {
             IconButton(
               icon: const Icon(Icons.feedback),
               onPressed: () {
+                // これを書くだけ
                 BetterFeedback.of(context).show((UserFeedback feedback) {
                   // フィードバックのテキスト
                   print(feedback.text);
-                  // フィードバックのスクリーンショット
+                  // フィードバックのスクリーンショット(Unit8List型)
                   print(feedback.screenshot);
 
                   /*
@@ -77,7 +78,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
-                      content: Text('フィードバックを送信しました。ご報告ありがとうございます！'),
+                      content: Text(
+                        'フィードバックを送信しました。ご報告ありがとうございます！',
+                      ),
                     ),
                   );
                 });
