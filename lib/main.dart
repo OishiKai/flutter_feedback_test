@@ -71,7 +71,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   // フィードバックのスクリーンショット
                   print(feedback.screenshot);
 
-                  // ここでFirebaseなどにフィードバックを送信する処理を書く
+                  /*
+                  ここでFirebaseなどにフィードバックを送信する処理を書く
+                   */
+
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
                       content: Text('フィードバックを送信しました。ご報告ありがとうございます！'),
